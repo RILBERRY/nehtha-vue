@@ -1,0 +1,1 @@
+import{o as e,r as t,c as n,a,b as r,d as c}from"./app-2acee37d.js";/* empty css            */const m={__name:"LoginLayout",setup(s){return e(()=>console.log("login layout mounted")),(u,l)=>{const o=t("router-view");return c(),n("div",null,[a(" Login Layout "),r(o)])}}};export{m as default};

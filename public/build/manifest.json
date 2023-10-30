@@ -1,0 +1,65 @@
+{
+  "resources/js/app.js": {
+    "css": [
+      "assets/app-34ae28f5.css"
+    ],
+    "dynamicImports": [
+      "resources/js/layouts/DashboardLayout.vue",
+      "resources/js/pages/DashboardPage.vue",
+      "resources/js/layouts/LoginLayout.vue",
+      "resources/js/pages/LoginPage.vue"
+    ],
+    "file": "assets/app-2acee37d.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/layouts/DashboardLayout.vue": {
+    "css": [
+      "assets/app-34ae28f5.css"
+    ],
+    "file": "assets/DashboardLayout-4ff988fa.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/layouts/DashboardLayout.vue"
+  },
+  "resources/js/layouts/LoginLayout.vue": {
+    "css": [
+      "assets/app-34ae28f5.css"
+    ],
+    "file": "assets/LoginLayout-6707d33c.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/layouts/LoginLayout.vue"
+  },
+  "resources/js/pages/DashboardPage.vue": {
+    "css": [
+      "assets/app-34ae28f5.css"
+    ],
+    "file": "assets/DashboardPage-074f10b0.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/pages/DashboardPage.vue"
+  },
+  "resources/js/pages/LoginPage.vue": {
+    "css": [
+      "assets/app-34ae28f5.css"
+    ],
+    "file": "assets/LoginPage-f1b5132c.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/pages/LoginPage.vue"
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-34ae28f5.css",
+    "isEntry": true,
+    "src": "resources/sass/app.scss"
+  }
+}

@@ -1,0 +1,37 @@
+## Register API
+    url : /api/register
+    headers :{
+        Accepet:application/json,
+    }
+    data: {
+        "full_name" : "Ali Rilwan",
+        "contact" : "9XXXXXX",
+        "email" : "test@gmail.com",
+        "password" : "password",
+        "password_confirmation" : "password"
+    }
+
+## Login API
+    url : /api/login
+    headers :{
+        Accepet:application/json,
+    }
+    data: {
+        "contact" : "9XXXXXX",
+        "password" : "password",
+    }
+
+## logout API
+    url : /api/logout
+    headers :{
+        Accepet:application/json,
+        Authorization: Bearer token,
+    }
+
+## me API
+    url : /api/me
+    headers :{
+        Accepet:application/json,
+        Authorization: Bearer token,
+    }
+

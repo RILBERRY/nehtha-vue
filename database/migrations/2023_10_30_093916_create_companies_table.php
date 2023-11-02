@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('lat')->nullable();
             $table->string('email');
             $table->boolean('is_active')->default(false);
-            $table->boolean('is_blocked')->default(false);
             $table->boolean('accept_bulk_request')->default(false);
             $table->timestamps();
         });

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('contact')->nullable();
             $table->json('medicines')->nullable();
             $table->json('prescription_path')->nullable();
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

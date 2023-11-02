@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('memo_request_remarks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('memo_request_id')->constrained('memo_requests');
+            $table->string('remark');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

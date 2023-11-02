@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('memo_request_logs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('request_id')->constrained('memo_requests');
+            $table->json('from')->nullable();
+            $table->json('to');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

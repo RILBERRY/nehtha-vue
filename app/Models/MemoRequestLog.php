@@ -17,5 +17,9 @@ class MemoRequestLog extends Model
             'user_id' => 'required',
         ];
     }
+    protected $casts = [
+        'form'=> 'json',
+        'to'=> 'json',
+    ];
 
 }

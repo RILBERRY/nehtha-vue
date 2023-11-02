@@ -20,4 +20,8 @@ class Memo extends Model
             'status' => 'nullable',
         ];
     }
+    protected $casts = [
+        'medicines' => 'json',
+        'prescription_path' => 'json',
+    ];
 }

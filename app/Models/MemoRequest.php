@@ -18,4 +18,8 @@ class MemoRequest extends Model
             'medicines' => 'nullable',
         ];
     }
+
+    protected $casts = [
+        'medicines' => 'json',
+    ];
 }

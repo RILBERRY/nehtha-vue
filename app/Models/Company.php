@@ -14,6 +14,7 @@ class Company extends Model
             'name'=>'required',
             'registration_no'=>'nullable',
             'company_type_id'=>'required',
+            'address'=>'required',
             'contact'=>'nullable',
             'long'=>'nullable',
             'lat'=>'nullable',
@@ -22,4 +23,7 @@ class Company extends Model
             'accept_bulk_request'=>'nullable',
         ];
     }
+    protected $casts = [
+        'address'=> 'json',
+    ];
 }

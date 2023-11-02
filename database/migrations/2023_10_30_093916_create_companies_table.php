@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('registration_no')->nullable();
             $table->foreignId('company_type_id')->constrained('company_types');
+            $table->json('address');
             $table->string('contact')->nullable();
             $table->string('long')->nullable();
             $table->string('lat')->nullable();

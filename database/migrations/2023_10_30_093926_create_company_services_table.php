@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('company_services', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('company_id')->constrained('company');
+            $table->foreignId('company_id')->constrained('companies');
             $table->string('service_name');
             $table->boolean('is_active')->default(false);
             $table->timestamps();

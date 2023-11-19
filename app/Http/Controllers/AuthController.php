@@ -13,7 +13,6 @@ class AuthController extends Controller
 {
     public function register(Request $request)
     {
-        $this->createProfile(1,'own');
         $data =$request->validate([
             'full_name' => 'required',
             'contact' => 'required|unique:users',
@@ -23,6 +22,8 @@ class AuthController extends Controller
 
         $data['password'] = Hash::make($data['password']);
         $user = User::create($data);
+        $this->createProfile($user->id);
+        $user->load('profiles');
         $token = $user->createToken('authToken')->plainTextToken;
 
         return response()->json([
@@ -32,13 +33,16 @@ class AuthController extends Controller
     }
 
     function createProfile($userId, $type='own' , $companyId=null){
-        $status = 'pending';
-        $status = 'accepted';
+        $isActive = false;
+        if($type=='own'){
+            $isActive = true;
+        }
 
-        $profile = Profile::create([
+        Profile::create([
             'type' => $type,
-            'status' => $status,
+            'is_active' => $isActive,
             'user_id' => $userId,
+            'company_id' => $companyId,
         ]);
     }
 
@@ -50,10 +54,11 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $user = Auth::user();
+            $user->profiles;
             $token = $user->createToken('authToken')->plainTextToken;
 
             return response()->json([
-                'user' => $user,
+                'user' => Auth::user(),
                 'token' => $token,
             ]);
         }

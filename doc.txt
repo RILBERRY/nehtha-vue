@@ -1,4 +1,5 @@
 ## Register API
+    method: POST
     url : /api/register
     headers :{
         Accepet:application/json,
@@ -12,6 +13,7 @@
     }
 
 ## Login API
+    method: POST
     url : /api/login
     headers :{
         Accepet:application/json,
@@ -22,6 +24,7 @@
     }
 
 ## logout API
+    method: POST
     url : /api/logout
     headers :{
         Accepet:application/json,
@@ -29,9 +32,39 @@
     }
 
 ## me API
+    method: GET
     url : /api/me
     headers :{
         Accepet:application/json,
         Authorization: Bearer token,
+    }
+
+## Service API (resource Route)
+    method: (resource Route)
+    url : /api/service
+    headers :{
+        Accepet:application/json,
+        Authorization: Bearer token,
+    }
+    //ON update pass only change required fields
+    data: {
+        "name" : "Pharmacy",
+        "description" : "Provides Medical supply",
+        "is_active" : 0 or 1
+
+    }
+
+## Company Types API (resource Route)
+    method: (resource Route)
+    url : /api/company-type
+    headers :{
+        Accepet:application/json,
+        Authorization: Bearer token,
+    }
+    //ON update pass only change required fields
+    data: {
+        "name" : "Electronic",
+        "slug" : "electronic",
+        "is_active" : 0
     }
 

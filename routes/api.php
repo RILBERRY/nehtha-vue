@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\CompanyTypeController;
 use App\Http\Controllers\MemoController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,7 +26,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class,'logout'])->name('logout');
 
 
-    Route::post('/memo/create', [MemoController::class,'store'])->name('create.memo');
+    Route::resource('/service' , ServiceController::class);
+    Route::resource('/company-type' , CompanyTypeController::class);
+    Route::resource('/company' , CompanyController::class);
 });
 
 

@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Company;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
-class CompanyController extends BaseController
+class ServiceController extends BaseController
 {
     public function __construct()
     {
-        $this->model = Company::class;
+        $this->model = Service::class;
         $this->relation=[];
         $this->allowedFilters=['name'];
         $this->allowedIncludes=[];

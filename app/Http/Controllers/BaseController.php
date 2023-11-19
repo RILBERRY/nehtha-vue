@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Spatie\QueryBuilder\QueryBuilder;
 class BaseController extends Controller
 {
@@ -20,7 +21,7 @@ class BaseController extends Controller
         ->allowedIncludes($this->allowedIncludes)
         ->allowedSorts($this->allowedIncludes)
         ->simplePaginate(10);
-        return $data;
+        return response()->json($data, Response::HTTP_OK );
     }
 
 
@@ -29,7 +30,8 @@ class BaseController extends Controller
         $model = app()->make($this->model);
         $validatedData = $request->validate($model->storeRules());
         $data = $model::create( $validatedData );
-        return $data;
+        return response()->json($data, Response::HTTP_OK );
+
 
     }
 
@@ -37,17 +39,19 @@ class BaseController extends Controller
     public function show($id)
     {
         $data = $this->model::findOrFail($id);
-        return $data;
+        return response()->json($data, Response::HTTP_OK );
+
     }
 
 
     public function update(Request $request, $id)
     {
         $model = app()->make($this->model);
-        $validatedData = $request->validate($model->updateRules());
+        $validatedData = $request->validate($model->updateRules(),$request->only($model->dataCol));
         $modelData = $model->findOrFail($id);
-        $data = $modelData->update( $validatedData );
-        return $data;
+        $modelData->update($validatedData);
+        return response()->json($modelData, Response::HTTP_OK );
+
     }
 
     public function destroy($id)

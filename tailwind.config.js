@@ -7,7 +7,12 @@ export default {
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        primary:'#ADEBEB',
+        secondary:'#1E7B7B',
+      }
+    },
   },
   plugins: [
     require('flowbite/plugin')

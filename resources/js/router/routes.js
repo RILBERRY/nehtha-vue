@@ -1,4 +1,4 @@
-import { useUserStore } from '../store/user'
+import {  } from '../store/user'
 
 const routes = [
     {
@@ -15,15 +15,15 @@ const routes = [
                 }
             },
 
-            // {
-            //     path: 'users',
-            //     name: 'users',
-            //     component: () => import('../pages/UsersPage.vue'),
-            //     meta: {
-            //         name: 'Users',
-            //         permission: 'users.index'
-            //     }
-            // },
+            {
+                path: '/requests',
+                name: 'requests',
+                component: () => import('../pages/RequestList.vue'),
+                meta: {
+                    name: 'Request',
+                    permission: 'reqests.index'
+                }
+            },
 
             // {
             //     path: 'users/:id',

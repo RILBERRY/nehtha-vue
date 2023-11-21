@@ -24,6 +24,25 @@ const routes = [
                     permission: 'reqests.index'
                 }
             },
+            {
+                path: '/products',
+                name: 'products',
+                // component: () => import('../pages/Products.vue'),
+                component: () => import('../pages/CommingSoon.vue'),
+                meta: {
+                    name: 'Products',
+                    permission: 'products.index'
+                }
+            },
+            {
+                path: '/users',
+                name: 'users',
+                component: () => import('../pages/Users.vue'),
+                meta: {
+                    name: 'Users',
+                    permission: 'users.index'
+                }
+            },
 
             // {
             //     path: 'users/:id',

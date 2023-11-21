@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title> Dashboard </title>
     <link href="fsicon.ico" rel="icon">
     @vite(['resources/js/app.js'])
 </head>

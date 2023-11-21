@@ -1,23 +1,14 @@
 <script setup>
-import { initModals } from 'flowbite';
-import { onMounted, ref } from 'vue';
-import RequestDetails from '../components/RequestDetails.vue';
+import { onMounted } from 'vue';
 
-onMounted(() => {
-    initModals();
-})
-const requestId = ref(null);
-const openRequestDetils = (id) => {
-    requestId.value = id
-}
-
+onMounted(() => console.log('dashboard page mounted'))
 </script>
 <template>
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg m-5">
         <div
             class="flex flex-column sm:flex-row flex-wrap space-y-4 sm:space-y-0 items-center justify-between pb-4 bg-white p-5">
             <div class="P-2 font-bold text-gray-500 text-xl">
-                REQUESTS
+                PRODUCTS
             </div>
             <label for="table-search"
                 class="sr-only">Search</label>
@@ -39,7 +30,6 @@ const openRequestDetils = (id) => {
                     placeholder="Search for items">
             </div>
         </div>
-        <RequestDetails :requestId="requestId" :key="requestId"/>
         <div class=" max-h-[70vh] overflow-y-scroll bg-white">
         <table class="w-full text-sm text-left rtl:text-right text-gray-50 dark:text-gray-400 ">
             <thead fixed class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400 sticky top-0">
@@ -67,7 +57,7 @@ const openRequestDetils = (id) => {
                 </tr>
             </thead>
             <tbody class="text-gray-800 " >
-                <tr  @click="openRequestDetils(1)"
+                <tr
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">
                     <td scope="row"
                         class="px-6 py-4 ">
@@ -90,7 +80,7 @@ const openRequestDetils = (id) => {
                    <span class="p-1 bg-gray-300 rounded-md text-gray-500">Taken</span> -->
                     </td>
                 </tr>
-                <tr data-modal-target="default-modal" data-modal-toggle="default-modal"
+                <tr
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">
                     <td class="px-6 py-4 ">
                         20-Nov-2023 <span class="text-xs text-gray-400">02:30</span>
@@ -112,7 +102,7 @@ const openRequestDetils = (id) => {
                    <span class="p-1 bg-gray-300 rounded-md text-gray-500">Taken</span> -->
                     </td>
                 </tr>
-                <tr data-modal-target="default-modal" data-modal-toggle="default-modal"
+                <tr
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">
                     <td class="px-6 py-4 ">
                         20-Nov-2023 <span class="text-xs text-gray-400">02:30</span>

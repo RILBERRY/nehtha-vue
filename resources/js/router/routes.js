@@ -2,8 +2,8 @@ import {  } from '../store/user'
 
 const routes = [
     {
-        path: '/',
-        component: () => import('../layouts/DashboardLayout.vue'),
+        path: '/vendor',
+        component: () => import('../layouts/VendorsLayout.vue'),
         children: [
             {
                 path: '',
@@ -16,7 +16,51 @@ const routes = [
             },
 
             {
-                path: '/requests',
+                path: '/vendor/requests',
+                name: 'requests',
+                component: () => import('../pages/RequestList.vue'),
+                meta: {
+                    name: 'Request',
+                    permission: 'reqests.index'
+                }
+            },
+            {
+                path: '/vendor/products',
+                name: 'products',
+                // component: () => import('../pages/Products.vue'),
+                component: () => import('../pages/CommingSoon.vue'),
+                meta: {
+                    name: 'Products',
+                    permission: 'products.index'
+                }
+            },
+            {
+                path: '/vendor/users',
+                name: 'users',
+                component: () => import('../pages/Users.vue'),
+                meta: {
+                    name: 'Users',
+                    permission: 'users.index'
+                }
+            },
+        ]
+    },
+    {
+        path: '/master',
+        component: () => import('../layouts/MasterLayout.vue'),
+        children: [
+            {
+                path: '',
+                name: 'dashboard',
+                component: () => import('../pages/master/DashboardPage.vue'),
+                meta: {
+                    name: 'Home',
+                    permission: 'me'
+                }
+            },
+
+            {
+                path: '/master/requests',
                 name: 'requests',
                 component: () => import('../pages/RequestList.vue'),
                 meta: {

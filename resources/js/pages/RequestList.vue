@@ -39,7 +39,7 @@ const openRequestDetils = (id) => {
                     placeholder="Search for items">
             </div>
         </div>
-        <RequestDetails :requestId="requestId" :key="requestId"/>
+        <RequestDetails :requestId="requestId" />
         <div class=" max-h-[70vh] overflow-y-scroll bg-white">
         <table class="w-full text-sm text-left rtl:text-right text-gray-50 dark:text-gray-400 ">
             <thead fixed class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400 sticky top-0">
@@ -67,7 +67,7 @@ const openRequestDetils = (id) => {
                 </tr>
             </thead>
             <tbody class="text-gray-800 " >
-                <tr  @click="openRequestDetils(1)"
+                <tr  @click="openRequestDetils(1)" data-modal-target="default-modal" data-modal-toggle="default-modal"
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">
                     <td scope="row"
                         class="px-6 py-4 ">
@@ -76,10 +76,10 @@ const openRequestDetils = (id) => {
                     <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         REQ-2023-000001
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-center">
                         A778899
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-center">
                         Ali Hameed
                     </td>
                     <td class="px-6 py-4 text-center">
@@ -90,7 +90,7 @@ const openRequestDetils = (id) => {
                    <span class="p-1 bg-gray-300 rounded-md text-gray-500">Taken</span> -->
                     </td>
                 </tr>
-                <tr data-modal-target="default-modal" data-modal-toggle="default-modal"
+                <tr  @click="openRequestDetils(2)"  data-modal-target="default-modal" data-modal-toggle="default-modal"
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">
                     <td class="px-6 py-4 ">
                         20-Nov-2023 <span class="text-xs text-gray-400">02:30</span>
@@ -98,10 +98,10 @@ const openRequestDetils = (id) => {
                     <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         REQ-2023-000002
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-center">
                         A778899
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-center">
                         Ali Hameed
                     </td>
                     <td class="px-6 py-4 text-center">
@@ -120,10 +120,10 @@ const openRequestDetils = (id) => {
                     <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         REQ-2023-000001
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-center">
                         A778899
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-center">
                         Ali Hameed
                     </td>
                     <td class="px-6 py-4 text-center">
@@ -142,10 +142,10 @@ const openRequestDetils = (id) => {
                     <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         REQ-2023-000001
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-center">
                         A778899
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-center">
                         Ali Hameed
                     </td>
                     <td class="px-6 py-4  text-center">
@@ -164,10 +164,10 @@ const openRequestDetils = (id) => {
                     <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         REQ-2023-000001
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-center">
                         A778899
                     </td>
-                    <td class="px-6 py-4">
+                    <td class="px-6 py-4 text-center">
                         Ali Hameed
                     </td>
                     <td class="px-6 py-4 text-center" >

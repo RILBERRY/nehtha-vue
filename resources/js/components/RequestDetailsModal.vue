@@ -26,11 +26,10 @@ onMounted(() => {
                 <div class="p-5 ">
                     <div class="flex justify-between text-gray-500 font-bold align-middle">
                         <h4 class="mt-auto">Patient Info</h4>
-                        <div class="flex gap-2 ">
-                            <button type="button"
-                                class="text-white bg-red-600 p-2 px-4 rounded-md">Not-Available</button>
-                            <button type="button"
-                                class="text-white bg-green-600 p-2 px-4 rounded-md">Available</button>
+                        <div class="flex gap-2 justify-end">
+                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available (Aasandha Not Covered)</button>
+                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not Available</button>
+                            <button class="p-2 px-4 bg-blue-300 rounded-md text-blue-500">Available</button>
                         </div>
                     </div>
                     <div class=" mt-5 p-2 rounded-lg border border-gray-300 ">
@@ -66,8 +65,10 @@ onMounted(() => {
                                             Apple MacBook Pro 17"
                                         </th>
                                         <td class="px-6 py-4 flex gap-2 justify-end  ">
-                                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available <span class=" text-xm">(Aasandha Not Covered)</span></button>
-                                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not Available</button>
+                                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available
+                                                <span class=" text-xm">(Aasandha Not Covered)</span></button>
+                                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not
+                                                Available</button>
                                             <button class="p-2 px-4 bg-blue-300 rounded-md text-blue-500">Available</button>
                                         </td>
                                     </tr>
@@ -77,8 +78,10 @@ onMounted(() => {
                                             Apple MacBook Pro 17"
                                         </th>
                                         <td class="px-6 py-4 flex gap-2 justify-end  ">
-                                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available <span class=" text-xm">(Aasandha Not Covered)</span></button>
-                                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not Available</button>
+                                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available
+                                                <span class=" text-xm">(Aasandha Not Covered)</span></button>
+                                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not
+                                                Available</button>
                                             <button class="p-2 px-4 bg-blue-300 rounded-md text-blue-500">Available</button>
                                         </td>
                                     </tr>
@@ -88,8 +91,10 @@ onMounted(() => {
                                             Apple MacBook Pro 17"
                                         </th>
                                         <td class="px-6 py-4 flex gap-2 justify-end  ">
-                                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available <span class=" text-xm">(Aasandha Not Covered)</span></button>
-                                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not Available</button>
+                                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available
+                                                <span class=" text-xm">(Aasandha Not Covered)</span></button>
+                                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not
+                                                Available</button>
                                             <button class="p-2 px-4 bg-blue-300 rounded-md text-blue-500">Available</button>
                                         </td>
                                     </tr>
@@ -99,8 +104,10 @@ onMounted(() => {
                                             Apple MacBook Pro 17"
                                         </th>
                                         <td class="px-6 py-4 flex gap-2 justify-end  ">
-                                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available <span class=" text-xm">(Aasandha Not Covered)</span></button>
-                                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not Available</button>
+                                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available
+                                                <span class=" text-xm">(Aasandha Not Covered)</span></button>
+                                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not
+                                                Available</button>
                                             <button class="p-2 px-4 bg-blue-300 rounded-md text-blue-500">Available</button>
                                         </td>
                                     </tr>
@@ -110,8 +117,10 @@ onMounted(() => {
                                             Apple MacBook Pro 17"
                                         </th>
                                         <td class="px-6 py-4 flex gap-2 justify-end  ">
-                                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available <span class=" text-xm">(Aasandha Not Covered)</span></button>
-                                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not Available</button>
+                                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available
+                                                <span class=" text-xm">(Aasandha Not Covered)</span></button>
+                                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not
+                                                Available</button>
                                             <button class="p-2 px-4 bg-blue-300 rounded-md text-blue-500">Available</button>
                                         </td>
                                     </tr>
@@ -121,19 +130,20 @@ onMounted(() => {
                                             Apple MacBook Pro 17"
                                         </th>
                                         <td class="px-6 py-4 flex gap-2 justify-end  ">
-                                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available <span class=" text-xm">(Aasandha Not Covered)</span></button>
-                                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not Available</button>
+                                            <button class="p-2 px-4 bg-orange-300 rounded-md text-orange-500">Available
+                                                <span class=" text-xm">(Aasandha Not Covered)</span></button>
+                                            <button class="p-2 px-4 bg-red-300 rounded-md text-red-500">Not
+                                                Available</button>
                                             <button class="p-2 px-4 bg-blue-300 rounded-md text-blue-500">Available</button>
                                         </td>
                                     </tr>
 
-                                </tbody>
-                            </table>
-                        </div>
-
+                            </tbody>
+                        </table>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
-</template>
+</div></template>

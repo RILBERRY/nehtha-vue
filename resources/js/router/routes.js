@@ -2,13 +2,13 @@ import {  } from '../store/user'
 
 const routes = [
     {
-        path: '/vendor',
-        component: () => import('../layouts/VendorsLayout.vue'),
+        path: '',
+        component: () => import('../layouts/CustomersLayout.vue'),
         children: [
             {
                 path: '',
                 name: 'dashboard',
-                component: () => import('../pages/DashboardPage.vue'),
+                component: () => import('../pages/customer/DashboardPage.vue'),
                 meta: {
                     name: 'Home',
                     permission: 'me'
@@ -16,30 +16,65 @@ const routes = [
             },
 
             {
-                path: '/vendor/requests',
+                path: 'requests',
                 name: 'requests',
-                component: () => import('../pages/RequestList.vue'),
+                component: () => import('../pages/customer/RequestList.vue'),
                 meta: {
                     name: 'Request',
                     permission: 'reqests.index'
                 }
             },
             {
-                path: '/vendor/products',
+                path: '/products',
                 name: 'products',
-                // component: () => import('../pages/Products.vue'),
-                component: () => import('../pages/CommingSoon.vue'),
+                // component: () => import('../pages/customer/Products.vue'),
+                component: () => import('../pages/customer/CommingSoon.vue'),
                 meta: {
                     name: 'Products',
                     permission: 'products.index'
                 }
             },
+        ]
+    },
+    {
+        path: '/vendor',
+        component: () => import('../layouts/VendorsLayout.vue'),
+        children: [
+            {
+                path: '',
+                name: 'vendor-dashboard',
+                component: () => import('../pages/vendor/DashboardPage.vue'),
+                meta: {
+                    name: 'VendorHome',
+                    permission: 'me'
+                }
+            },
+
+            {
+                path: '/vendor/requests',
+                name: 'vendor-requests',
+                component: () => import('../pages/vendor/RequestList.vue'),
+                meta: {
+                    name: 'VendorRequest',
+                    permission: 'reqests.index'
+                }
+            },
+            {
+                path: '/vendor/products',
+                name: 'vendor-products',
+                // component: () => import('../pages/vendor/Products.vue'),
+                component: () => import('../pages/vendor/CommingSoon.vue'),
+                meta: {
+                    name: 'VendorProducts',
+                    permission: 'products.index'
+                }
+            },
             {
                 path: '/vendor/users',
-                name: 'users',
-                component: () => import('../pages/Users.vue'),
+                name: 'vendor-users',
+                component: () => import('../pages/vendor/Users.vue'),
                 meta: {
-                    name: 'Users',
+                    name: 'VendorUsers',
                     permission: 'users.index'
                 }
             },
@@ -51,39 +86,39 @@ const routes = [
         children: [
             {
                 path: '',
-                name: 'dashboard',
+                name: 'master-dashboard',
                 component: () => import('../pages/master/DashboardPage.vue'),
                 meta: {
-                    name: 'Home',
+                    name: 'MasterHome',
                     permission: 'me'
                 }
             },
 
             {
                 path: '/master/requests',
-                name: 'requests',
-                component: () => import('../pages/RequestList.vue'),
+                name: 'master-requests',
+                component: () => import('../pages/master/RequestList.vue'),
                 meta: {
-                    name: 'Request',
+                    name: 'MasterRequest',
                     permission: 'reqests.index'
                 }
             },
             {
                 path: '/products',
-                name: 'products',
-                // component: () => import('../pages/Products.vue'),
-                component: () => import('../pages/CommingSoon.vue'),
+                name: 'master-products',
+                // component: () => import('../pages/master/Products.vue'),
+                component: () => import('../pages/master/CommingSoon.vue'),
                 meta: {
-                    name: 'Products',
+                    name: 'MasterProducts',
                     permission: 'products.index'
                 }
             },
             {
                 path: '/users',
-                name: 'users',
-                component: () => import('../pages/Users.vue'),
+                name: 'master-users',
+                component: () => import('../pages/master/Users.vue'),
                 meta: {
-                    name: 'Users',
+                    name: 'MasterUsers',
                     permission: 'users.index'
                 }
             },

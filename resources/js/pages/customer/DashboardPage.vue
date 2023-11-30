@@ -3,11 +3,12 @@ import { onMounted } from 'vue';
 </script>
 <template>
     <div class="flex justify-center gap-5 flex-wrap w-full">
-        <div class=" w-full lg:w-3/6 bg-white rounded-lg md:flex md:flex-col md:justify-center md:gap-3 shadow dark:bg-gray-800 p-4 md:p-6">
+        <div
+            class=" w-full lg:w-3/6 bg-white rounded-lg md:flex md:flex-col md:justify-center md:gap-3 shadow dark:bg-gray-800 p-4 md:p-6">
             <div class="flex justify-center mb-3">
                 <div class="flex items-center">
                     <div class="flex justify-center items-center">
-                        <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white pe-">Request Status</h5>
+                        <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white pe-">My Request Status</h5>
                     </div>
                 </div>
             </div>
@@ -119,4 +120,5 @@ import { onMounted } from 'vue';
 
             </div>
         </div>
-</div></template>
+    </div>
+</template>

@@ -1,6 +1,8 @@
 <script setup>
+import { initFlowbite } from 'flowbite';
 import { onMounted } from 'vue';
 onMounted(() => {
+    initFlowbite();
 })
 
 const logOut = () => {
@@ -95,7 +97,7 @@ const logOut = () => {
             <div class="h-full px-3 pb-4 overflow-y-auto bg-white text-secondary font-semibold dark:bg-gray-800">
                 <ul class="space-y-2 font-medium">
                     <li>
-                        <router-link  to="/"
+                        <router-link  to="/vendor/"
                             class="flex items-center p-2 rounded-lg dark:text-white font-semibold hover:bg-gray-100 hover:pl-5 duration-200 dark:hover:bg-gray-700 group">
                             <svg class="w-5 h-5 text-secondary transition duration-75 dark:text-gray-400 group-hover:text-secondary dark:group-hover:text-white"
                                 aria-hidden="true"
@@ -111,7 +113,7 @@ const logOut = () => {
                         </router-link>
                     </li>
                     <li>
-                        <router-link to="/requests"
+                        <router-link to="/vendor/requests"
                             class="flex items-center p-2 rounded-lg dark:text-white font-semibold hover:bg-gray-100 hover:pl-5 duration-200 dark:hover:bg-gray-700 group">
                             <svg class="flex-shrink-0 w-5 h-5 text-secondary transition duration-75 dark:text-gray-400  dark:group-hover:text-white"
                                 aria-hidden="true"
@@ -127,7 +129,7 @@ const logOut = () => {
                         </router-link>
                     </li>
                     <li>
-                        <router-link to="/products"
+                        <router-link to="/vendor/products"
                             class="flex items-center p-2 rounded-lg dark:text-white font-semibold hover:bg-gray-100 hover:pl-5 duration-200 dark:hover:bg-gray-700 group">
                             <svg class="flex-shrink-0 w-5 h-5 text-secondary transition duration-75 dark:text-gray-400  dark:group-hover:text-white"
                                 aria-hidden="true"
@@ -141,7 +143,7 @@ const logOut = () => {
                         </router-link >
                     </li>
                     <li>
-                        <router-link to="/users"
+                        <router-link to="/vendor/users"
                             class="flex items-center p-2 rounded-lg dark:text-white font-semibold hover:bg-gray-100 hover:pl-5 duration-200 dark:hover:bg-gray-700 group">
                             <svg class="flex-shrink-0 w-5 h-5 text-secondary transition duration-75 dark:text-gray-400  dark:group-hover:text-white"
                                 aria-hidden="true"

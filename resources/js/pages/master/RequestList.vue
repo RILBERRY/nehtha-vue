@@ -1,7 +1,7 @@
 <script setup>
 import { initModals } from 'flowbite';
 import { onMounted, ref } from 'vue';
-import RequestDetails from '../../components/RequestDetails.vue';
+import RequestDetails from '../../components/RequestDetailsModal.vue';
 
 onMounted(() => {
     initModals();

@@ -45,7 +45,7 @@ const openRequestDetils = (id) => {
             <thead fixed class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400 sticky top-0">
                 <tr>
                     <th scope="col"
-                        class="px-6 py-3">
+                        class="px-6 py-3 hidden ">
                         Request Date
                     </th>
                     <th scope="col"
@@ -54,11 +54,7 @@ const openRequestDetils = (id) => {
                     </th>
                     <th scope="col"
                         class="px-6 py-3 text-center">
-                        Patient NID
-                    </th>
-                    <th scope="col"
-                        class="px-6 py-3 text-center">
-                        Patient Name
+                        Patient Details
                     </th>
                     <th scope="col"
                         class="px-6 py-3 text-center">
@@ -70,8 +66,9 @@ const openRequestDetils = (id) => {
                 <tr  @click="openRequestDetils(1)" data-modal-target="default-modal" data-modal-toggle="default-modal"
                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">
                     <td scope="row"
-                        class="px-6 py-4 ">
-                        20-Nov-2023 <span class="text-xs text-gray-400"> 2:30 pm</span>
+                        class="px-6 py-4  ">
+                        <span>20-Nov-2023 </span>
+                        <span class="text-xs text-gray-400"> 2:30 pm</span>
                     </td>
                     <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         REQ-2023-000001

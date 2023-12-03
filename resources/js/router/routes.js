@@ -3,7 +3,7 @@ import {  } from '../store/user'
 const routes = [
     {
         path: '',
-        component: () => import('../layouts/CustomersLayout.vue'),
+        component: () => import('../layouts/CustomerLayout.vue'),
         children: [
             {
                 path: '',
@@ -14,7 +14,25 @@ const routes = [
                     permission: 'me'
                 }
             },
-
+            {
+                path: '/memo/create',
+                name: 'create-memos',
+                component: () => import('../pages/customer/CreateMemo.vue'),
+                meta: {
+                    name: 'Memo',
+                    permission: 'products.index'
+                }
+            },
+            {
+                path: '/memo',
+                name: 'memos',
+                // component: () => import('../pages/customer/Products.vue'),
+                component: () => import('../pages/customer/CreateMemo.vue'),
+                meta: {
+                    name: 'Memo',
+                    permission: 'products.index'
+                }
+            },
             {
                 path: 'requests',
                 name: 'requests',
@@ -22,16 +40,6 @@ const routes = [
                 meta: {
                     name: 'Request',
                     permission: 'reqests.index'
-                }
-            },
-            {
-                path: '/products',
-                name: 'products',
-                // component: () => import('../pages/customer/Products.vue'),
-                component: () => import('../pages/customer/CommingSoon.vue'),
-                meta: {
-                    name: 'Products',
-                    permission: 'products.index'
                 }
             },
         ]
